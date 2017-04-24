@@ -1,0 +1,6 @@
+<h5>Super Cool Balances</h5>
+
+<div class="d-flex justify-content-start" *ngFor="let opp of service.ownedOpportunities">
+    <div class="p-2"><a href="javascript:void(0)" (click)="goToPay(opp.name)">{{opp.name}}</a></div>
+    <div class="ml-auto p-2">{{opp.balance | currency:'USD':true}}</div>
+</div>

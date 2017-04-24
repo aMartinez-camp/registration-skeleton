@@ -1,0 +1,14 @@
+<h5 class="d-flex justify-content-start">Search For Super Cool Events</h5>
+
+<input class="form-control" placeholder="Search for an event"/>
+<table class="table">
+  <tbody>
+    <tr *ngFor="let event of service.openOpportunities" >
+      <td>
+        <button class="btn btn-info">Register</button>
+      </td>
+      <td>{{event.name}}</td>
+      <td>{{event.price | currency:'USD':true}}</td>
+    </tr>
+  </tbody>
+</table>
